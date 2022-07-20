@@ -1,5 +1,5 @@
-# covergo - Insurance premium calculator
-Basic insurance premium calculator
+# Covergo - Insurance premium calculator
+![Untitled_ Jul 20, 2022 9_20 PM](https://user-images.githubusercontent.com/58142229/180027424-9c687095-fc9f-412f-9801-2a512e0fb6ae.gif)
 
 ## Getting started.
 
