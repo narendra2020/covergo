@@ -78,8 +78,8 @@ const InsuranceFormComponent = (props:any) => {
 
 
    /* Return form template */
-	return (!formValues.isSummaryEnabled ? <>
-		<section className='section'>
+  return (!formValues.isSummaryEnabled ? <>
+    <section className='section'>
       <h1 className='App-title'>Tell us about yourself</h1>
       <div>
         <form onSubmit={submit } className="premiumform">
@@ -110,11 +110,11 @@ const InsuranceFormComponent = (props:any) => {
                 </div>
                 <div className='radio-options'>
                   <input type='radio' name='packageType' value="2" checked={formValues.packageType === "2"} onChange={handleFormChange} />
-                  <label className='packageType-label'>Safe {formValues.age  ? `(+ ${formValues.safeCharges}, 0.5 )`: '(+ 0,0.5)' }</label>
+                  <label className='packageType-label'>Safe {formValues.age  ? `(+${formValues.safeCharges} ${formValues.country}, 50% )`: '(+0HKD, 50%)' }</label>
                 </div>
                 <div className='radio-options'>  
                   <input type='radio' name='packageType' value="3" checked={formValues.packageType === "3"} onChange={handleFormChange} />
-                  <label className='packageType-label'>Super Safe {formValues.age  ? `(+ ${formValues.superSafeCharges}, 0.75 )`: '(+ 0,0.75)' }</label>
+                  <label className='packageType-label'>Super Safe {formValues.age  ? `(+${formValues.superSafeCharges} ${formValues.country}, 75% )`: '(+0HKD, 75%)' }</label>
                 </div>  
               </div>
             
@@ -131,7 +131,7 @@ const InsuranceFormComponent = (props:any) => {
       </div>
       
     </section>
-	</>: formValues.isSummaryEnabled && <InsuranceSummaryComponent {...formValues} />);
+  </>: formValues.isSummaryEnabled && <InsuranceSummaryComponent {...formValues} />);
 }
 
 export default InsuranceFormComponent;
